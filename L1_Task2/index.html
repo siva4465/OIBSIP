@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2cb6b433dd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="pics/logo.png" width="80px" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <!-- <li><a href="#">portfolio</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header_text">
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span style="color:#ffb000 ;">Siva</span></h1>
+            <!-- <button class="btnmain"><a href="footer">Explore</a></button> -->
+            <a href="#" class="exp">Let's Connect</a>
+        </div>
+    </div>
+</div>
+
+<!--------------------------------------------About------------------------------------------->
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="pics/avatar.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h2 class="sub-title">About Me</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sunt, consequuntur provident dolorem architecto eos voluptatibus, nihil, magni est quaerat dicta autem excepturi ad iure qui eaque nobis dolore accusantium.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+                    <p class="tab-links"  onclick="opentab('experience')" >Experience</p>
+                    <p class="tab-links" onclick="opentab('education')" >Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>FrontEnd Development</li>
+                        <li><span>App Development</span><br>Android/ios Apps</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>jan - 2023  </span><br>Oasis Infobyte Intern</li>
+                        <li><span>sep-2022</span><br>Youtube Clone FrontEnd Interface</li>
+                        <li><span>App Development</span><br>Android/ios Apps</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020 - 2023</span><br>Sri YN College</li>
+                        <li><span>2018 - 2020</span><br>Sri Gowtami Junior College</li>
+                        <li><span>2017 - 2018</span><br>Sri Gowtami Foundation School</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- -------------------------------------------services------------------------------------- -->
+<div id="services">
+    <div class="container">
+        <h2 class="sub-title">Services</h2>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error architecto consequatur iure saepe enim, exercitationem, non tenetur consequuntur sed nulla eius amet voluptatum mollitia, aliquam eaque fugit voluptatibus assumenda eligendi.</p>
+                <a href="#">Lear more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h3>UI/UX</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error architecto consequatur iure saepe enim, exercitationem, non tenetur consequuntur sed nulla eius amet voluptatum mollitia, aliquam eaque fugit voluptatibus assumenda eligendi.</p>
+                <a href="#">Lear more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h3>APP Design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error architecto consequatur iure saepe enim, exercitationem, non tenetur consequuntur sed nulla eius amet voluptatum mollitia, aliquam eaque fugit voluptatibus assumenda eligendi.</p>
+                <a href="#">Lear more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- --------------------------------------portfolio-------------------------------------- -->
+
+<!-- ---------------------------------------contact--------------------------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h2 class="sub-title">Contact Me</h2>
+                <P><i class="fa-solid fa-paper-plane"></i>mohansivasanker@gmail.com</P>
+                <P><i class="fa-solid fa-phone"></i>+91 9182504465</P>
+                <div class="socal-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a class="btn" href="pics/CV.txt" download >Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+
+<footer id="end">
+    <div class="copyright">
+        <p>Copyright 	&#169; Siva. Made With <i class="fa-solid fa-heart"></i> </p>
+    </div>
+</footer>
+
+</body>
+</html>
